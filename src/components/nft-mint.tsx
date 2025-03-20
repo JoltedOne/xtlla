@@ -89,7 +89,7 @@ export function NftMint(props: Props) {
       {/* Content (GIF, Card, Buttons, and Toast) */}
       <div className="relative z-20 flex flex-col items-center justify-center">
         {/* GIF with Hover Effect */}
-        <div className="mb-6 group max-w-md w-full">
+        <div className="mt-24 sm:mt-20 mb-6 group max-w-md w-full">
           <img
             src="/xtllatextbase.gif"
             alt="Base GIF"
