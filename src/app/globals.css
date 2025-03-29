@@ -95,7 +95,7 @@
   border-bottom: none; /* Remove default bottom border */
 }
 
-/* Top border (1px thin, slightly less wide) */
+/* Top border with gradient */
 .custom-frame-border::before {
   content: '';
   position: absolute;
@@ -103,12 +103,17 @@
   left: 8px; /* Pulls the left end inward by 8px */
   right: 8px; /* Pulls the right end inward by 8px */
   height: 1px; /* 1px thin line */
-  background: rgba(255, 255, 255, 0.9); /* Matches border-white/90 */
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.3), /* 30% opacity at the left */
+    rgba(255, 255, 255, 1), /* Solid white in the center */
+    rgba(255, 255, 255, 0.3) /* 30% opacity at the right */
+  ); /* Gradient from 30% opacity to solid white to 30% opacity */
   border-radius: 8px; /* Matches rounded-lg */
   z-index: 1; /* Above the card but below content */
 }
 
-/* Bottom border (1px thin, slightly less wide) */
+/* Bottom border with gradient */
 .custom-frame-border::after {
   content: '';
   position: absolute;
@@ -116,7 +121,12 @@
   left: 8px; /* Pulls the left end inward by 8px */
   right: 8px; /* Pulls the right end inward by 8px */
   height: 1px; /* 1px thin line */
-  background: rgba(255, 255, 255, 0.9); /* Matches border-white/90 */
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 0.3), /* 30% opacity at the left */
+    rgba(255, 255, 255, 1), /* Solid white in the center */
+    rgba(255, 255, 255, 0.3) /* 30% opacity at the right */
+  ); /* Gradient from 30% opacity to solid white to 30% opacity */
   border-radius: 8px; /* Matches rounded-lg */
   z-index: 1; /* Above the card but below content */
 }
