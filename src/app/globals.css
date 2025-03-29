@@ -95,28 +95,28 @@
   border-bottom: none; /* Remove default bottom border */
 }
 
-/* Top border (1px thin, extends 8px above) */
+/* Top border (1px thin, slightly less wide) */
 .custom-frame-border::before {
   content: '';
   position: absolute;
   top: -8px; /* Extends 8px above the card */
-  left: -1px; /* Aligns with the left border */
-  right: -1px; /* Aligns with the right border */
+  left: 8px; /* Pulls the left end inward by 8px */
+  right: 8px; /* Pulls the right end inward by 8px */
   height: 1px; /* 1px thin line */
   background: rgba(255, 255, 255, 0.9); /* Matches border-white/90 */
-  border-radius: 8px; /* Matches rounded-lg (Tailwind's rounded-lg is 8px) */
+  border-radius: 8px; /* Matches rounded-lg */
   z-index: 1; /* Above the card but below content */
 }
 
-/* Bottom border (1px thin, extends 8px below) */
+/* Bottom border (1px thin, slightly less wide) */
 .custom-frame-border::after {
   content: '';
   position: absolute;
   bottom: -8px; /* Extends 8px below the card */
-  left: -1px; /* Aligns with the left border */
-  right: -1px; /* Aligns with the right border */
+  left: 8px; /* Pulls the left end inward by 8px */
+  right: 8px; /* Pulls the right end inward by 8px */
   height: 1px; /* 1px thin line */
   background: rgba(255, 255, 255, 0.9); /* Matches border-white/90 */
-  border-radius: 8px; /* Matches rounded-lg (Tailwind's rounded-lg is 8px) */
+  border-radius: 8px; /* Matches rounded-lg */
   z-index: 1; /* Above the card but below content */
 }
