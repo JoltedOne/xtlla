@@ -103,7 +103,7 @@ export function NftMint(props: Props) {
         </div>
 
         {/* Card */}
-        <Card className="w-full max-w-md bg-gray-999 border border-white/90 outline outline-1 outline-white/30 outline-offset-4">
+        <Card className="w-full max-w-md bg-gray-999 outline outline-1 outline-white/30 outline-offset-4 custom-frame-border">
           <CardContent className="pt-6">
             <div className="aspect-square overflow-hidden rounded-lg mb-4 relative">
               {props.isERC1155 ? (

@@ -86,3 +86,32 @@
     @apply bg-background text-foreground;
   }
 }
+
+.custom-frame-border {
+  position: relative; /* Allows pseudo-elements to position relative to the card */
+  border: none; /* Remove the default border since we’re replacing it */
+}
+
+/* Top taller border */
+.custom-frame-border::before {
+  content: '';
+  position: absolute;
+  top: -8px; /* Extends 8px above the card */
+  left: 0;
+  right: 0;
+  height: 16px; /* Total height: 8px above + 8px into the card */
+  background: rgba(255, 255, 255, 0.9); /* Matches border-white/90 */
+  z-index: 1; /* Ensures it’s above the card but below content */
+}
+
+/* Bottom taller border */
+.custom-frame-border::after {
+  content: '';
+  position: absolute;
+  bottom: -8px; /* Extends 8px below the card */
+  left: 0;
+  right: 0;
+  height: 16px; /* Total height: 8px below + 8px into the card */
+  background: rgba(255, 255, 255, 0.9); /* Matches border-white/90 */
+  z-index: 1; /* Ensures it’s above the card but below content */
+}
