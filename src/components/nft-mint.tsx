@@ -103,7 +103,7 @@ export function NftMint(props: Props) {
         </div>
 
         {/* Card */}
-        <Card className="w-full max-w-md bg-gray-800">
+        <Card className="w-full max-w-md bg-gray-999">
           <CardContent className="pt-6">
             <div className="aspect-square overflow-hidden rounded-lg mb-4 relative">
               {props.isERC1155 ? (
@@ -248,10 +248,10 @@ export function NftMint(props: Props) {
         </Card>
 
         {/* Buttons Below the Card */}
-        <div className="mt-6 flex flex-col sm:flex-row gap-4 max-w-md w-full">
+        <div className="mt-6 flex flex-col sm:flex-row gap-4 max-w-md w-full p-4 sm:p-6">
           <Button
             asChild
-            className="bg-gray-800 text-white hover:bg-gray-700 flex-1"
+            className="bg-gray-999 text-white hover:bg-gray-500/40 flex-1 border border-white/90"
           >
             <a href="https://jolted.one" target="_blank" rel="noopener noreferrer">
               Physical Shop
@@ -259,7 +259,7 @@ export function NftMint(props: Props) {
           </Button>
           <Button
             asChild
-            className="bg-gray-800 text-white hover:bg-gray-700 flex-1"
+            className="bg-gray-999 text-white hover:bg-gray-500/40 flex-1 border border-white/90"
           >
             <a href="https://www.fractalvisions.io/collections/0x5346b69c7277156881768d26b2c98817408d5085/collection" target="_blank" rel="noopener noreferrer">
               Fractal Visions Marketplace
