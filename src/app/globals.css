@@ -88,8 +88,11 @@
 }
 
 .custom-frame-border {
-  position: relative; /* Allows pseudo-elements to position relative to the card */
-  border: none; /* Remove the default border since we’re replacing it */
+  position: relative; /* For positioning pseudo-elements */
+  border-left: 1px solid rgba(255, 255, 255, 0.9); /* Left side of the inner border */
+  border-right: 1px solid rgba(255, 255, 255, 0.9); /* Right side of the inner border */
+  border-top: none; /* Remove default top border */
+  border-bottom: none; /* Remove default bottom border */
 }
 
 /* Top taller border */
@@ -97,11 +100,11 @@
   content: '';
   position: absolute;
   top: -8px; /* Extends 8px above the card */
-  left: 0;
-  right: 0;
+  left: -1px; /* Aligns with the left border */
+  right: -1px; /* Aligns with the right border */
   height: 16px; /* Total height: 8px above + 8px into the card */
   background: rgba(255, 255, 255, 0.9); /* Matches border-white/90 */
-  z-index: 1; /* Ensures it’s above the card but below content */
+  z-index: 1; /* Above the card but below content */
 }
 
 /* Bottom taller border */
@@ -109,9 +112,9 @@
   content: '';
   position: absolute;
   bottom: -8px; /* Extends 8px below the card */
-  left: 0;
-  right: 0;
+  left: -1px; /* Aligns with the left border */
+  right: -1px; /* Aligns with the right border */
   height: 16px; /* Total height: 8px below + 8px into the card */
   background: rgba(255, 255, 255, 0.9); /* Matches border-white/90 */
-  z-index: 1; /* Ensures it’s above the card but below content */
+  z-index: 1; /* Above the card but below content */
 }
